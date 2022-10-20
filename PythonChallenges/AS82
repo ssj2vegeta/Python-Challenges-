@@ -1,0 +1,8 @@
+def stringmanipulator(word):
+    j = list(word)
+    reversed_word = ""
+    for x in reversed(j):
+        reversed_word +=x
+    return reversed_word
+    
+    
