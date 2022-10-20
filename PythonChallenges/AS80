@@ -1,0 +1,16 @@
+
+from math import pi
+
+
+def circle_manipulation():
+   pop = int(input("What is the radius of your circle?"))
+   for x in range(1, 1000):
+     option = int(input("Type 1 if you want to calculate area and type 2 if you want to calculate circumference"))
+     if option == 1:
+        area = (pop ** 2) * pi
+        return area
+     elif option == 2:
+        circumference = pop * 2 * pi
+        return circumference
+
+print(circle_manipulation())
