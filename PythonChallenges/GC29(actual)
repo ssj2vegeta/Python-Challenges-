@@ -1,0 +1,8 @@
+import random
+
+Comments = ["Well done", "Need to Improve", "Appalling", "Mediocre", "Genius", "Massive improvement"]
+numberofstudents = int(input("How many students are there in the class?"))
+
+for i in range(1, numberofstudents):
+    randomchice = random.choice(Comments)
+    print(f"General comment for Student {i}: {randomchice}")
