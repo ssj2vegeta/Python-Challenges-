@@ -1,0 +1,10 @@
+import random
+
+Name = input("What is your name?").strip().title()
+
+
+RandomInsult = ["Nonce", "Moron", "Pillock", "Cretin", "Ingrate"]
+
+randchoice = random.choice(RandomInsult)
+
+print(f"You're a {randchoice}, {Name}!")
