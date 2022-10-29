@@ -1,0 +1,5 @@
+p = "always"
+
+print(p[:3])
+print(p[-1:-6:-1])
+print(p[0:6:3])
