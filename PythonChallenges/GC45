@@ -1,0 +1,8 @@
+while True:
+    input1 = input("Please enter 1 character")
+    length = len(input1)
+    if length == 2:
+       print("Nice")
+       break
+    else:
+        print("One character only")
