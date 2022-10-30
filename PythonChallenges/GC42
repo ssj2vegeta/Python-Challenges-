@@ -1,0 +1,10 @@
+import random
+list1 = []
+for i in range(50):
+    randomnumber = random.randint(500,2000)
+    list1.append(randomnumber)
+min1 = min(list1)
+max1 = max(list1)
+meanaverage = sum(list1)/len(list1)
+print(f"Minimum value is {min1}, Maximum Value is {max1}, Mean Average is {meanaverage}")
+
