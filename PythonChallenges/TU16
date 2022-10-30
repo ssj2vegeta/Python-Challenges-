@@ -1,0 +1,27 @@
+#exercise 1
+
+value = 129.00
+
+print(f"RM {value:.0f}")
+
+#exercise 2
+numcol1 = [2, 5, 7]
+numcol2 = [1, 0, 4]
+numcol3 = [8, 5, 9]
+
+x = 1
+for i in range(3):
+    if x == 1:
+        print(f"value            value            value   ")
+        print(f"{numcol1[i]:<15} {numcol2[i]:<15} {numcol3[i]:<15}")
+        x = x - 1
+    else:
+        print(f"{numcol1[i]:<15} {numcol2[i]:<15} {numcol3[i]:<15}")
+
+#exercise 3
+def denary_to_binary(num):
+    if num > 1:
+        denary_to_binary(num//2)
+    print(num % 2, end = "")
+
+denary_to_binary(45)
