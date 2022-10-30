@@ -1,0 +1,6 @@
+def denary_to_binary(num):
+    if num > 1:
+        denary_to_binary(num//2)
+    print(num % 2, end = "")
+
+denary_to_binary(45)
