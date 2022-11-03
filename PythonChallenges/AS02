@@ -1,0 +1,20 @@
+import random
+
+def random_list(noofelements):
+    list = []
+    for x in range(noofelements):
+        element = random.randint(0 , int(noofelements))
+        list.append(element)
+    return list
+
+
+
+def linear_search(list, element):
+    length = len(list)
+    for x in range(length):
+        if list[x] == element:
+            return x - 1
+
+list = random_list(100)
+print(list)
+print(linear_search(list, 24))
