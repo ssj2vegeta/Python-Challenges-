@@ -1,0 +1,21 @@
+import random
+
+answer = random.randint(1,100)
+
+for i in range(5):
+    number_of_try = 0 
+    while True:
+      guess = int(input())
+      if guess < 0 and guess > 100:
+        print("Invalid Guess!!!")
+      else:
+        break
+    if guess > answer:
+        print("It is too High!")
+        number_of_try += 1
+    elif guess < answer:
+        print("It is too Low!")
+        number_of_try += 1
+    else:
+        print("You win!")
+        break
