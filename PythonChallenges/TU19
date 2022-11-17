@@ -1,0 +1,7 @@
+with open("counter.txt","w") as new_file:
+    for i in range(10, -1, -1):
+        write = str(i) + "\n"
+        new_file.write(write)
+
+#changed the values in the range functin as went from 11 to 2 and not 10 to 0
+#also, the write function cant accept integers and    
