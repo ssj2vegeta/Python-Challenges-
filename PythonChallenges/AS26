@@ -1,0 +1,14 @@
+list1 = []
+length = 0
+average = 0
+with open("counter.txt","r") as whole_file:
+   for line in whole_file:
+      temp = line.split()
+      list1 = list1 + temp
+for i in list1:
+    length += len(i)
+print(list1)
+average = length / len(list1)
+rounded = round(average)
+#value rounded to integer
+print(rounded)
