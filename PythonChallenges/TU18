@@ -1,0 +1,17 @@
+# these documents were downloaded locally from my pc
+# instead of using filename I used the local path from my pc | this code is intrinsic to my laptop 
+
+fileno = int(input("what file would you like to open? ( either 1 for rudyard.txt or 2 for mam.txt)" ))
+if fileno == 1:
+    temp = "C:\\Users\\Haziq\\Documents\\rudyard.txt"
+elif fileno == 2:
+    temp = "C:\\Users\\Haziq\\Documents\\mam.txt"
+with open(temp,"r") as whole_file:
+   for line in whole_file:
+        while True:
+            input1 = input("keep going?")
+            if input1 == " ":
+                break
+            else:
+                continue
+        print(line,end="")
