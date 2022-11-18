@@ -1,0 +1,10 @@
+vowels = ['a','e', 'i', 'o', 'u', " "]
+input = input("what message would you like to encrypt")
+listtoencrypt = list(input)
+empt = ""
+for i in listtoencrypt:
+    if i not in vowels:
+        empt = empt + i + "o" + i
+    else:
+        empt = empt + i
+print(empt)
