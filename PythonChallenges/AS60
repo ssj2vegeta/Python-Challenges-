@@ -1,0 +1,18 @@
+def buildmatrix(cols,rows):
+    matrix = []
+    for i in range(rows):
+        matrix.append([])
+    k = 0
+    for j in matrix:
+        if k == 0:
+            for i in range(round(cols / 2)):
+                j.append(".")
+                j.append("*")
+            k += 1
+        elif k == 1:
+            for i in range(round(cols / 2)):
+                j.append("*")
+                j.append(".")
+            k -=1
+        print(j)
+buildmatrix()
