@@ -1,0 +1,30 @@
+import string
+alphabet = list(string.ascii_lowercase)
+caesarshiftedalphabet = list(string.ascii_lowercase)
+
+caesarshiftedalphabet.remove('a')
+caesarshiftedalphabet.append('a')
+
+msgtoencrypt = input("please enter your message")
+msgtoencrypt = msgtoencrypt.lower().strip()
+encryptedmsg = ""
+for i in msgtoencrypt:
+    for j in range(len(alphabet)):
+        if alphabet[j] == i:
+            encryptedmsg = encryptedmsg + caesarshiftedalphabet[j]
+        else:
+            continue
+
+print(f"the encryped message is: {encryptedmsg}")
+
+msgtodecrypt = input("please enter your message")
+msgtodecrypt = msgtodecrypt.lower().strip()
+decryptpedmsg = ""
+for i in msgtodecrypt:
+    for j in range(len(caesarshiftedalphabet)):
+        if caesarshiftedalphabet[j] == i:
+            decryptpedmsg = decryptpedmsg + alphabet[j]
+        else:
+            continue
+
+print(f"the decrypted message is: {decryptpedmsg}")
