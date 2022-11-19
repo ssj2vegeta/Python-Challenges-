@@ -1,0 +1,29 @@
+def gcd(int1,int2):
+    values1 = []
+    values2 = []
+    divisors1 = []
+    divisors2 = []
+    for i in range(1,int1+1):
+        values1.append(i)
+    for i in range(1,int2+1):
+        values2.append(i)
+    for i in values1:
+        if int1 % i == 0:
+            divisors1.append(i)
+        else:
+            continue
+    for i in values2:
+        if int2 % i == 0:
+            divisors2.append(i)
+        else:
+            continue
+    while True:
+        if max(divisors1) > max(divisors2):
+            divisors1.remove(max(divisors1))
+        elif max(divisors1) < max(divisors2):
+            divisors2.remove(max(divisors2))
+        elif max(divisors1) == max(divisors2):
+            return max(divisors1)
+int1 = int(input("")
+int2 = int(input(""))
+print(gcd())
