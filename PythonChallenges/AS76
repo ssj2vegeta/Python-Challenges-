@@ -1,0 +1,21 @@
+import random
+array = []
+for i in range(50):
+    array.append(random.randint(1,50))
+
+def minoflist():
+    while True:
+        a = int(input("pick a number between 1 and 50"))
+        if a > 0 and a < 51:
+            break
+        else:
+            continue
+    while True:
+        b = int(input("pick a number between 1 and 50"))
+        if b > 0 and b < 51:
+            break
+        else:
+            continue
+    return abs(array[a] - array[b]) # use abs here to return the absolute positive value if value turns out to be negative
+
+print(minoflist())
