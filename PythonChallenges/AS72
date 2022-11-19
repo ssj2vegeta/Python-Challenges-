@@ -1,0 +1,17 @@
+import string
+import random
+alphabet = list(string.ascii_lowercase)
+randomalphabet=[]
+for i in range(len(alphabet)):
+    randomalphabet.append(random.choice(alphabet))
+
+msgtoencrypt = input("please enter your message")
+msgtoencrypt = msgtoencrypt.lower().strip()
+encryptedmsg = ""
+for i in msgtoencrypt:
+    for j in range(len(alphabet)):
+        if alphabet[j] == i:
+            encryptedmsg = encryptedmsg + randomalphabet[j]
+        else:
+            continue
+print(encryptedmsg)
