@@ -1,0 +1,53 @@
+import string
+alphabet = list(string.ascii_lowercase)
+vowels = ['a', 'e', 'i', 'o' ,'u']
+
+def main():
+    input1 = input("test if your string is naughty or nice!'")
+    if naughtyornice(input1):
+        print("Nice String")
+    else:
+        print("Naughty String")
+
+def vowelchecker(y):
+    k = 0
+    for i in y:
+        if i in vowels:
+            k += 1
+        else:
+            continue
+
+    if k >= 3:
+        return True
+    else:
+        return False
+def doubleletter(y):
+    k = 0
+    empt = []
+    for i in y:
+        if i in empt:
+            k += 1
+            empt.append(i)
+        else:
+            empt.append(i)
+            continue
+    print(empt)
+    if k >= 1:
+        return True
+    else:
+        return False
+
+def notinstring(y):
+    if "xy" or "ab" or "cd" or "pq" not in y:
+        return True
+    elif "xy" or "ab" or "cd" or "pq" in y:
+        return False
+
+
+def naughtyornice(y):
+    if notinstring(y) == True and vowelchecker(y) == True and doubleletter(y) == True:
+        return True
+    else:
+        return False
+
+main()
