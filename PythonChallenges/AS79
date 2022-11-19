@@ -1,0 +1,9 @@
+string = input("input a string please")
+vowels = ['a','e','i','o','u']
+empt = ""
+for i in string:
+    if i in vowels:
+        empt = empt + "haha"
+    else:
+        empt = empt + i
+print(empt)
