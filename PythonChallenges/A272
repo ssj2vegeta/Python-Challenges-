@@ -1,0 +1,11 @@
+integer = int(input("enter number"))
+def reescursivesumdigit(integer):
+    total = 0
+    string = str(integer)
+    listed = list(string)
+    for i in listed:
+        total += int(i)
+    return total
+
+
+print(reescursivesumdigit(integer))
