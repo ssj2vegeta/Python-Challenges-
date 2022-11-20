@@ -2,10 +2,16 @@ import secrets
 color = input("whats your favourite color?")
 place = input("whats your favourite place?")
 animal = input("whast your favourite animal?")
-listt = list(color) + list(place) + list(animal) + [ "#", "!","$","%","&"]
+listt = list(color) + list(place) + list(animal) 
+specialcharacters = ["$","%","#","@","!"]
+
 empt = ""
 for i in range(len(listt)):
     temp = secrets.choice(listt)
     empt = empt + temp
     listt.remove(temp)
+for i in range(len(specialcharacters)):
+    temp = secrets.choice(specialcharacters)
+    empt = empt + temp
+    specialcharacters.remove(temp)
 print(empt)
