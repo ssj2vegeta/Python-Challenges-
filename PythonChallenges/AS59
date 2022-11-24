@@ -1,0 +1,74 @@
+emptlist = [["", "", ""], ["", "", ""], ["", "", ""]]
+a = emptlist[0]
+b = emptlist[1]
+c = emptlist[2]
+while True:
+        a = emptlist[0]
+        b = emptlist[1]
+        c = emptlist[2]
+        print(a[0],a[1],a[2])
+        print()
+        print("player 1's turn")
+        rows = int(input("enter the row you want to input your 'o' in"))
+        columns = int(input("enter the column you want to input your 'o' in"))
+        row = emptlist[rows-1]
+        row.pop(columns - 1)
+        row.insert(columns - 1, "o")
+        for i in emptlist:
+            print(i)
+        if a[0] == "o" and a[1] == "o" and a[2] == "o":
+            print("player one wins!")
+            break
+        elif b[0] == "o" and b[1] == "o" and b[2] == "o":
+            print("player one wins!")
+            break
+        elif c[0] == "o" and c[1] == "o" and c[2] == "o":
+            print("player one wins!")
+            break
+        elif a[0] == "o" and b[0] == "o" and c[0] == "o":
+            print("player one wins!")
+            break
+        elif a[1] == "o" and b[1] == "o" and c[1] == "o":
+            print("player one wins!")
+            break
+        elif a[2] == "o" and b[2] == "o" and c[2] == "o":
+            print("player one wins!")
+            break
+        elif a[0] == "o" and b[1] == "o" and c[2] == "o":
+            print("player one wins!")
+            break
+        elif a[2] == "o" and b[1] == "o" and c[0] == "o":
+            print("player one wins!")
+            break
+        print("player 2's turn")
+        rows = int(input("enter the row you want to input your 'x' in"))
+        columns = int(input("enter the column you want to input your 'x' in"))
+        row = emptlist[rows - 1]
+        row.pop(columns - 1)
+        row.insert(columns - 1, "x")
+        for i in emptlist:
+            print(i)
+        if a[0] == "x" and a[1] == "x" and a[2] == "x":
+            print("player two wins!")
+            break
+        elif b[0] == "x" and b[1] == "x" and b[2] == "x":
+            print("player two wins!")
+            break
+        elif c[0] == "x" and c[1] == "x" and c[2] == "x":
+            print("player two wins!")
+            break
+        elif a[0] == "x" and b[0] == "x" and c[0] == "x":
+            print("player two wins!")
+            break
+        elif a[1] == "x" and b[1] == "x" and c[1] == "x":
+            print("player two wins!")
+            break
+        elif a[2] == "x" and b[2] == "x" and c[2] == "x":
+            print("player two wins!")
+            break
+        elif a[0] == "x" and b[1] == "x" and c[2] == "x":
+            print("player two wins!")
+            break
+        elif a[2] == "x" and b[1] == "x" and c[0] == "x":
+            print("player two wins!")
+            break
