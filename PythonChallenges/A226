@@ -36,6 +36,8 @@ romantoenglishlist4 = {"M":"1","MM":"2","MMM":"3"}
 
 
 def romantoenglish(number):
+    reverse = stringmanipulator(number)
+    listed = list(number)
     list1 = []
     list2 = []
     list3 = []
@@ -52,8 +54,12 @@ def romantoenglish(number):
         if len(templist) > 0:
             max1 = max(templist)
             finallist.append(romantoenglishlist1[list1[templist.index(max1)]])
+            listed = listed[:(len(listed) - len(list1[(templist.index(max1))]))]
+            number = ""
+            for i in listed:
+                number = number + i
         else:
-            finallist.append(0)
+            finallist.append("0")
     if "X" or "L" in number:
         templist = []
         for i in romantoenglishlist2:
@@ -65,7 +71,7 @@ def romantoenglish(number):
             max1 = max(templist)
             finallist.append(romantoenglishlist2[list2[templist.index(max1)]])
         else:
-            finallist.append(0)
+            finallist.append("0")
     if "C" or "D" in number:
         templist = []
         for i in romantoenglishlist3:
@@ -76,8 +82,13 @@ def romantoenglish(number):
         if len(templist) > 0:
             max1 = max(templist)
             finallist.append(romantoenglishlist3[list3[templist.index(max1)]])
+            listed = listed[:(len(listed) - len(list3[(templist.index(max1))]))]
+            number = ""
+            for i in listed:
+                number = number + i
         else:
-            finallist.append(0)
+            finallist.append("0")
+
     if "M" in number:
         templist = []
         for i in romantoenglishlist4:
@@ -88,8 +99,13 @@ def romantoenglish(number):
         if len(templist) > 0:
             max1 = max(templist)
             finallist.append(romantoenglishlist4[list4[templist.index(max1)]])
+            listed = listed[:(len(listed) - len(list4[(templist.index(max1))]))]
+            number = ""
+            for i in listed:
+                number = number + i
+            print(number)
         elif len(templist) == 0:
-            finallist.append(0)
+            finallist.append("0")
     for i in range(len(finallist)-1, -1, -1):
         empt = empt  + finallist[i]
     return empt
