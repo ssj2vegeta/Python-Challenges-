@@ -1,0 +1,5 @@
+for i in range(99,-1,-1):
+    if i > 0:
+        print(f"{i} bottles of cola, take one down, pass it around ",end="")
+    else:
+        print(" A computer should be able to do this in no time at all",end="")
