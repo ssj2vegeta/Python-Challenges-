@@ -1,0 +1,14 @@
+a = float(input("input height"))
+b = float(input("input weight (in kg)"))
+def bmicalc(height,weight):
+    bmi = weight / (height**2)
+    if bmi < 18.5:
+        return "underweight"
+    elif bmi <= 25:
+        return "normal weight"
+    elif bmi <= 30:
+        return "overweight"
+    else:
+        return "obese"
+
+print(bmicalc(a,b))
